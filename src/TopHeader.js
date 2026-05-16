@@ -19,16 +19,15 @@ const TopHeader = () => {
               <article>
                 <h1 className="header-title">
                   <small className="church lead d-block mb-2">
-                    Primera Iglesia Bautista de Jinotepe
+                    Song Planning for Worship Teams
                   </small>
-                  <span className="gradient-text">Lista de Alabanzas</span>
+                  <span className="gradient-text">ZamarAvad Deck</span>
                 </h1>
                 <p className="header-description">
-                  El propósito de esta aplicación es presentar la lista oficial
-                  de cantos que se utilizarán en los servicios de culto
-                  evangélico de nuestra iglesia, facilitando la organización y
-                  participación en cada celebración de nuestro grupo de
-                  Alabanza.
+                  This application coordinates church worship services by
+                  organizing song lists, chord sheets, and practice videos. As a
+                  worship planning tool for singers and servants, it helps
+                  praise teams prepare well for every service.
                 </p>
               </article>
             </div>
