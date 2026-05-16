@@ -221,7 +221,6 @@ function App() {
   return (
     <main>
       <TopHeader />
-
       <SearchBar
         value={searchQuery}
         onChange={setSearchQuery}
@@ -230,7 +229,7 @@ function App() {
 
       <div className="filter-section slide-in-right">
         <div className="filter-label">
-          🏷️ <span>Filtrar por Tags:</span>
+          🏷️ <span>Filter by Tags:</span>
         </div>
 
         <FilterControls
@@ -247,8 +246,7 @@ function App() {
       </div>
 
       <div className="result-count">
-        Mostrando {filteredPlaylists.length} de {entries.length} Listas de
-        alabanzas
+        Showing {filteredPlaylists.length} of {entries.length} Worship Playlists
       </div>
 
       <div>{RenderPlaylist}</div>
