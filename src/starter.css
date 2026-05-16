@@ -1,0 +1,218 @@
+@import url('https://unpkg.com/modern-css-reset/dist/reset.min.css');
+@import url('https://unpkg.com/@contentful/f36-tokens@4.0.1/dist/css/index.css');
+@import url('https://www.contentful.com/fonts.css');
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Avenir Next W01';
+  margin: 0;
+  color: var(--text-color);
+  background: var(--gradient-bg);
+  background-attachment: fixed;
+  line-height: var(--line-height-default);
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Subtle animated background overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 122, 193, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(241, 103, 38, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Buttons - Enhanced with modern gradients and animations */
+button {
+  border: none;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  outline: none;
+  border-radius: 12px;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-condensed);
+  padding: var(--spacing-2xs) var(--spacing-m);
+  min-height: 36px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+
+  /* Primary gradient by default */
+  color: var(--color-white);
+  background: linear-gradient(135deg, #007ac1 0%, #1a8ed9 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a8ed9 0%, #3aa3e3 100%);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 0 20px rgba(0, 122, 193, 0.4),
+    0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+button:hover::before {
+  opacity: 1;
+}
+
+button:focus {
+  box-shadow:
+    0 0 0 3px rgba(0, 122, 193, 0.3),
+    0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:focus:not(:focus-visible) {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(0, 122, 193, 0.4),
+    0px 4px 12px rgba(0, 0, 0, 0.2);
+  outline: 2px solid #1a8ed9;
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+button > a {
+  text-decoration: none;
+  font-weight: normal;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+}
+
+button.button-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+button.button-secondary::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+button.button-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.1),
+    0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+button.button-large {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  min-height: 48px;
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: var(--spacing-l);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02rem;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-m);
+  margin: var(--spacing-m) 0;
+}
+
+small {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.1;
+  display: block;
+  color: red;
+}
