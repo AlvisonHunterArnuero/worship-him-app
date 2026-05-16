@@ -57,7 +57,7 @@ const PlaylistWrapper = ({
               }}
             >
               <div className="card-header text-uppercase text-info small">
-                {name} - Culto Evangelico
+                {name} - Evangelical service
               </div>
               <div className="card-body">
                 <ReactMarkdown>{songList}</ReactMarkdown>

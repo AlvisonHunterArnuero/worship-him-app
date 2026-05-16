@@ -9,7 +9,7 @@ function ThumbCaption({ thumbCaptionText }) {
   }
   return (
     <div style={smallCaption}>
-      {`${thumbCaptionText || 'Haga click en la imagen de arriba para descubrir el video'}`}
+      {`${thumbCaptionText || 'Click on the image to watch the video'}`}
     </div>
   )
 }

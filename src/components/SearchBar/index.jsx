@@ -12,7 +12,7 @@ const SearchBar = ({
   value,
   onChange,
   onClear,
-  placeholder = 'Buscar por nombre, artista o canción...',
+  placeholder = 'Search by name, artist, or song...',
 }) => {
   const inputRef = useRef(null)
 
@@ -50,14 +50,14 @@ const SearchBar = ({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        aria-label="Buscar alabanzas"
+        aria-label="Search playlists by name, artist, or song"
       />
       {value && (
         <button
           className="search-clear"
           onClick={handleClear}
-          aria-label="Limpiar búsqueda"
-          title="Limpiar (Esc)"
+          aria-label="Clear search"
+          title="Clear (Esc)"
         >
           <i className="bi bi-x-circle-fill"></i>
         </button>

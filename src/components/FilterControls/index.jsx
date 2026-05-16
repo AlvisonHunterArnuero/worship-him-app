@@ -47,30 +47,30 @@ const FilterControls = ({
       <button
         className="btn-filter-action"
         onClick={onSelectAll}
-        title="Seleccionar todas las etiquetas"
+        title="Select all tags"
       >
         <i className="bi bi-check-all me-1"></i>
-        Seleccionar Todo
+        Select All
       </button>
 
       <button
         className="btn-filter-action"
         onClick={onDeselectAll}
         disabled={!hasSelection}
-        title="Deseleccionar todas las etiquetas"
+        title="Deselect all tags"
       >
         <i className="bi bi-x me-1"></i>
-        Deseleccionar Todo
+        Deselect All
       </button>
 
       {activeCount > 0 && (
         <button
-          className="btn-clear-all"
+          className="d-flex gap-2 border-0 align-items-center btn btn-danger"
           onClick={onClearAll}
-          title="Limpiar búsqueda y filtros"
+          title="Clear search and filters"
         >
           <i className="bi bi-trash me-1"></i>
-          Limpiar Todo
+          Clear All
           <span className="filter-badge">{activeCount}</span>
         </button>
       )}
